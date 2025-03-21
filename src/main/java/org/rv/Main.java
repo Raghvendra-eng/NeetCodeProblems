@@ -14,6 +14,7 @@ public class Main {
         System.out.println("AHP-4: Group Anagram");
         System.out.println("AHP-5: Top K Frequent Elements");
         System.out.println("AHP-6: Encoder Decoder");
+        System.out.println("AHP-7: Product of array except self");
         System.out.print("\nEnter problem code : ");
 
         Scanner sc = new Scanner(System.in).useDelimiter("\n");
@@ -85,6 +86,14 @@ public class Main {
                 for ( String str: decodedString)
                     System.out.print(str + " ");
                 System.out.println();
+                break;
+            case "AHP-7":
+                System.out.println("Product of array except self");
+                System.out.println("Please provide comma separated integer values of the array (with space after comma)");
+                System.out.println("eg. 1, 2, 3, 4");
+                String inputArrayForProductOfArrayExceptSelf = sc.next();
+                ProductOfArrayExceptSelf productOfArrayExceptSelf = new ProductOfArrayExceptSelf();
+                printArray(productOfArrayExceptSelf.productExceptSelf(getIntegerArrayFromString(inputArrayForProductOfArrayExceptSelf)));
                 break;
             default:
                 System.out.println("Invalid code entered");
