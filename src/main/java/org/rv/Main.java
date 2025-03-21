@@ -1,9 +1,6 @@
 package org.rv;
 
-import org.rv.solution.ContainsDuplicate;
-import org.rv.solution.GroupAnagram;
-import org.rv.solution.TwoSum;
-import org.rv.solution.ValidAnagram;
+import org.rv.solution.*;
 
 import java.util.*;
 
@@ -15,6 +12,7 @@ public class Main {
         System.out.println("AHP-2: Valid Anagram");
         System.out.println("AHP-3: Two Sum");
         System.out.println("AHP-4: Group Anagram");
+        System.out.println("AHP-5: Top K Frequent Elements");
         System.out.print("\nEnter problem code : ");
 
         Scanner sc = new Scanner(System.in).useDelimiter("\n");
@@ -62,6 +60,19 @@ public class Main {
                 System.out.println("Group of anagram are listed below");
                 printListOfList(groupAnagramObj.groupAnagrams(inputArrayForValidAnagram.split(", ")));
                 break;
+            case "AHP-5":
+                System.out.println("Top K most frequent element");
+                System.out.println("Please provide comma separated integer values of the array (with space after comma)");
+                System.out.println("eg. 1, 2, 3, 4");
+                String inputArrayForTopKFrequent = sc.next();
+                System.out.println("Provide the value of k");
+                int k = sc.nextInt();
+                TopKMostFrequentElement topKMostFrequentElementObj = new TopKMostFrequentElement();
+                System.out.printf("Top %d most frequent elements are:\n", k);
+                printArray(topKMostFrequentElementObj.topKFrequent(getIntegerArrayFromString(inputArrayForTopKFrequent), k));
+                break;
+            default:
+                System.out.println("Invalid code entered");
         }
     }
 
