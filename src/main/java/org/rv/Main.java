@@ -1,6 +1,7 @@
 package org.rv;
 
 import org.rv.solution.ContainsDuplicate;
+import org.rv.solution.GroupAnagram;
 import org.rv.solution.TwoSum;
 import org.rv.solution.ValidAnagram;
 
@@ -13,10 +14,12 @@ public class Main {
         System.out.println("AHP-1: Contains Duplicate");
         System.out.println("AHP-2: Valid Anagram");
         System.out.println("AHP-3: Two Sum");
+        System.out.println("AHP-4: Group Anagram");
         System.out.print("\nEnter problem code : ");
 
         Scanner sc = new Scanner(System.in).useDelimiter("\n");
         String problemCode = sc.next();
+        int len;
 
         switch (problemCode.toUpperCase()) {
             case "AHP-1":
@@ -50,6 +53,24 @@ public class Main {
                 System.out.printf("Index that sum up target = %d\n", target);
                 printArray(ans);
                 break;
+            case "AHP-4":
+                System.out.println("List Anagram");
+                System.out.println("Please provide comma separated String values of the array (with space after comma)");
+                System.out.println("eg. \"ab\", \"bc\", \"cd\", \"df\"");
+                String inputArrayForValidAnagram = sc.next();
+                GroupAnagram groupAnagramObj = new GroupAnagram();
+                System.out.println("Group of anagram are listed below");
+                printListOfList(groupAnagramObj.groupAnagrams(inputArrayForValidAnagram.split(", ")));
+                break;
+        }
+    }
+
+    private static void printListOfList(List<List<String>> lists) {
+        for (List<String> list: lists) {
+            for (String str: list) {
+                System.out.print(str + " ");
+            }
+            System.out.println();
         }
     }
 
