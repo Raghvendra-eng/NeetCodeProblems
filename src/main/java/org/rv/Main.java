@@ -13,6 +13,7 @@ public class Main {
         System.out.println("AHP-3: Two Sum");
         System.out.println("AHP-4: Group Anagram");
         System.out.println("AHP-5: Top K Frequent Elements");
+        System.out.println("AHP-6: Encoder Decoder");
         System.out.print("\nEnter problem code : ");
 
         Scanner sc = new Scanner(System.in).useDelimiter("\n");
@@ -70,6 +71,20 @@ public class Main {
                 TopKMostFrequentElement topKMostFrequentElementObj = new TopKMostFrequentElement();
                 System.out.printf("Top %d most frequent elements are:\n", k);
                 printArray(topKMostFrequentElementObj.topKFrequent(getIntegerArrayFromString(inputArrayForTopKFrequent), k));
+                break;
+            case "AHP-6":
+                System.out.println("Encode Decode");
+                System.out.println("Please provide comma separated String values of the array (with space after comma)");
+                System.out.println("eg. \"ab\", \"bc\", \"cd\", \"df\"");
+                String inputArrayForEncodeDecode = sc.next();
+                EncodeAndDecoder encodeAndDecoder = new EncodeAndDecoder();
+                String encodedString = encodeAndDecoder.encode(Arrays.asList(inputArrayForEncodeDecode.split(", ")));
+                System.out.println("Encoded string is: " + encodedString);
+                System.out.println("Decoded String for above encode string is: ");
+                List<String> decodedString = encodeAndDecoder.decode(encodedString);
+                for ( String str: decodedString)
+                    System.out.print(str + " ");
+                System.out.println();
                 break;
             default:
                 System.out.println("Invalid code entered");
