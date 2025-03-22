@@ -4,6 +4,10 @@ import org.rv.array_hashmap_solution.*;
 
 import java.util.*;
 
+import static org.rv.util.PrintUtil.printArray;
+import static org.rv.util.PrintUtil.printListOfList;
+import static org.rv.util.StringManipulationUtil.getIntegerArrayFromString;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Below list contains ProblemCodes and problem description. Choose the ProblemCode from the below list");
@@ -119,30 +123,5 @@ public class Main {
             default:
                 System.out.println("Invalid code entered");
         }
-    }
-
-    private static void printListOfList(List<List<String>> lists) {
-        for (List<String> list: lists) {
-            for (String str: list) {
-                System.out.print(str + " ");
-            }
-            System.out.println();
-        }
-    }
-
-    private static int[] getIntegerArrayFromString(String inputArray) {
-        String[] stringNumber = inputArray.split(", ");
-        int []nums = new int[stringNumber.length];
-        for (int iterator = 0; iterator < stringNumber.length; iterator++) {
-            nums[iterator] = Integer.parseInt(stringNumber[iterator]);
-        }
-        return nums;
-    }
-
-    private static void printArray(int []nums) {
-        for ( int num: nums) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
     }
 }
