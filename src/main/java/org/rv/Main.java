@@ -1,6 +1,6 @@
 package org.rv;
 
-import org.rv.solution.*;
+import org.rv.array_hashmap_solution.*;
 
 import java.util.*;
 
@@ -107,6 +107,14 @@ public class Main {
                 }
                 ValidSudoku validSudokuObj = new ValidSudoku();
                 System.out.println("The Above is valid sudoku: Statement is " + validSudokuObj.isValidSudoku(board));
+                break;
+            case "AHP-9":
+                System.out.println("Longest Consecutive Sequence");
+                System.out.println("Please provide comma separated integer values of the array (with space after comma)");
+                System.out.println("eg. 1, 2, 3, 4");
+                String inputLongestConsecutiveArray = sc.next();
+                LongestConsecutiveSequence longestConsecutiveSequence = new LongestConsecutiveSequence();
+                System.out.println("The length of longest consecutive sequence in array is : " + longestConsecutiveSequence.longestConsecutive(getIntegerArrayFromString(inputLongestConsecutiveArray)));
                 break;
             default:
                 System.out.println("Invalid code entered");

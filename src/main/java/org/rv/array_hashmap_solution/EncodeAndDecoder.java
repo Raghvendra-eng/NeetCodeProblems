@@ -1,4 +1,4 @@
-package org.rv.solution;
+package org.rv.array_hashmap_solution;
 
 import java.util.ArrayList;
 import java.util.List;
