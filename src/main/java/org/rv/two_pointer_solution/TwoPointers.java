@@ -17,6 +17,7 @@ public class TwoPointers {
         System.out.println("TP-2 : Two Sum Input Array is Sorted");
         System.out.println("TP-3 : Three Sum");
         System.out.println("TP-4 : Container With Most Water");
+        System.out.println("TP-5 : Trapping Rain Water");
         System.out.println();
     }
 
@@ -58,6 +59,15 @@ public class TwoPointers {
                 ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
                 System.out.println("Maximum water that can be store in above line graph is: ");
                 System.out.println(containerWithMostWater.maxArea(getIntegerArrayFromString(inputArrayForContainerWithMostWater)));
+                break;
+            case "TP-5":
+                System.out.println("Trapping Rain Water");
+                System.out.println("Please provide comma separated integer values of the array (with space after comma)");
+                System.out.println("eg. 1, 2, 3, 4");
+                String inputArrayForTrappingRainWater = sc.next();
+                TrappingRainWater trappingRainWater = new TrappingRainWater();
+                System.out.println("Maximum water that can be trapped from above histogram is: ");
+                System.out.println(trappingRainWater.trap(getIntegerArrayFromString(inputArrayForTrappingRainWater)));
                 break;
             default:
                 System.out.println("Invalid problemCode for two pointers");
