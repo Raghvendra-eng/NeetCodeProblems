@@ -15,6 +15,7 @@ public class Main {
         System.out.println("AHP-5: Top K Frequent Elements");
         System.out.println("AHP-6: Encoder Decoder");
         System.out.println("AHP-7: Product of array except self");
+        System.out.println("AHP-8: Valid Sudoku");
         System.out.print("\nEnter problem code : ");
 
         Scanner sc = new Scanner(System.in).useDelimiter("\n");
@@ -94,6 +95,18 @@ public class Main {
                 String inputArrayForProductOfArrayExceptSelf = sc.next();
                 ProductOfArrayExceptSelf productOfArrayExceptSelf = new ProductOfArrayExceptSelf();
                 printArray(productOfArrayExceptSelf.productExceptSelf(getIntegerArrayFromString(inputArrayForProductOfArrayExceptSelf)));
+                break;
+            case "AHP-8":
+                System.out.println("Valid Sudoku");
+                System.out.println("Please provide the sudoku matrix");
+                char[][] board = new char[9][9];
+                for (int i = 0; i < 9 ; i++) {
+                    for ( int j = 0; j < 9; j++) {
+                        board[i][j] = sc.next().toCharArray()[0];
+                    }
+                }
+                ValidSudoku validSudokuObj = new ValidSudoku();
+                System.out.println("The Above is valid sudoku: Statement is " + validSudokuObj.isValidSudoku(board));
                 break;
             default:
                 System.out.println("Invalid code entered");
