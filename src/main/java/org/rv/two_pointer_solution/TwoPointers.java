@@ -7,21 +7,25 @@ import static org.rv.util.StringManipulationUtil.getIntegerArrayFromString;
 
 public class TwoPointers {
 
-    private final String problemCode;
+    private String problemCode;
     private final Scanner sc = new Scanner(System.in).useDelimiter("\n");
 
-    public TwoPointers(String problemCode) {
-        this.problemCode = problemCode;
-    }
+    public TwoPointers() {}
 
     public void printListOfProblemCode() {
         System.out.println("TP-1 : Valid Palindrome");
         System.out.println("TP-2 : Two Sum Input Array is Sorted");
         System.out.println("TP-3 : Three Sum");
+        System.out.println("TP-4 : Container With Most Water");
+        System.out.println();
+    }
+
+    public void setProblemCode(String problemCode) {
+        this.problemCode = problemCode;
     }
 
     public void solve() {
-        switch (problemCode.toUpperCase()) {
+        switch (problemCode) {
             case "TP-1":
                 System.out.println("Give input string to check it is valid palindrome or not");
                 ValidPalindrome validPalindromeObj = new ValidPalindrome();
@@ -46,8 +50,17 @@ public class TwoPointers {
                 ThreeSum threeSumObj = new ThreeSum();
                 printListOfListIntegers(threeSumObj.threeSum(getIntegerArrayFromString(inputArrayForThreeSum)));
                 break;
+            case "TP-4":
+                System.out.println("Container With Most Water");
+                System.out.println("Please provide comma separated integer values of the array (with space after comma)");
+                System.out.println("eg. 1, 2, 3, 4");
+                String inputArrayForContainerWithMostWater = sc.next();
+                ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
+                System.out.println("Maximum water that can be store in above line graph is: ");
+                System.out.println(containerWithMostWater.maxArea(getIntegerArrayFromString(inputArrayForContainerWithMostWater)));
+                break;
             default:
-                System.out.println("Invalid problemCode");
+                System.out.println("Invalid problemCode for two pointers");
         }
     }
 }
