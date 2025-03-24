@@ -11,18 +11,9 @@ public class PrintUtil {
         System.out.println();
     }
 
-    public static void printListOfList(List<List<String>> lists) {
-        for (List<String> list: lists) {
-            for (String str: list) {
-                System.out.print(str + " ");
-            }
-            System.out.println();
-        }
-    }
-
-    public static void printListOfListIntegers(List<List<Integer>> lists) {
-        for (List<Integer> list: lists) {
-            for (Integer str: list) {
+    public static <T> void printListOfList(List<List<T>> lists) {
+        for (List<T> list: lists) {
+            for (T str: list) {
                 System.out.print(str + " ");
             }
             System.out.println();

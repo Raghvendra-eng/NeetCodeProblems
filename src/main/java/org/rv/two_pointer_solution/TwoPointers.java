@@ -49,7 +49,7 @@ public class TwoPointers {
                 System.out.println("eg. 1, 2, 3, 4");
                 String inputArrayForThreeSum = sc.next();
                 ThreeSum threeSumObj = new ThreeSum();
-                printListOfListIntegers(threeSumObj.threeSum(getIntegerArrayFromString(inputArrayForThreeSum)));
+                printListOfList(threeSumObj.threeSum(getIntegerArrayFromString(inputArrayForThreeSum)));
                 break;
             case "TP-4":
                 System.out.println("Container With Most Water");
