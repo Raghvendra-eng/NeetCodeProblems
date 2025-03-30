@@ -3,6 +3,7 @@ package org.rv;
 import org.rv.advanced_graph.NetworkDelayTime;
 import org.rv.array_hashmap_solution.*;
 import org.rv.binary_search.BinarySearchSolution;
+import org.rv.intervals.InsertIntervals;
 import org.rv.linked_list.LinkedListSolutions;
 import org.rv.sliding_window.SlidingWindow;
 import org.rv.two_pointer_solution.TwoPointers;
@@ -46,11 +47,11 @@ public class Main {
             linkedListSolutions.setProblemCode(problemCode.toUpperCase());
             linkedListSolutions.solve();
         }
-        NetworkDelayTime networkDelayTimeObj = new NetworkDelayTime();
+        InsertIntervals insertIntervals = new InsertIntervals();
         int [][]grid = new int[][] {
-                {1,2,1},
-                {2,3,1}
+                {1,3},
+                {4,6}
         };
-        System.out.println(networkDelayTimeObj.networkDelayTime(grid, 4, 1));
+        System.out.println(insertIntervals.insert(grid, new int[] {2, 5}));
     }
 }
