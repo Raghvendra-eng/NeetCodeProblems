@@ -1,5 +1,6 @@
 package org.rv;
 
+import org.rv.advanced_graph.NetworkDelayTime;
 import org.rv.array_hashmap_solution.*;
 import org.rv.binary_search.BinarySearchSolution;
 import org.rv.linked_list.LinkedListSolutions;
@@ -45,5 +46,11 @@ public class Main {
             linkedListSolutions.setProblemCode(problemCode.toUpperCase());
             linkedListSolutions.solve();
         }
+        NetworkDelayTime networkDelayTimeObj = new NetworkDelayTime();
+        int [][]grid = new int[][] {
+                {1,2,1},
+                {2,3,1}
+        };
+        System.out.println(networkDelayTimeObj.networkDelayTime(grid, 4, 1));
     }
 }
