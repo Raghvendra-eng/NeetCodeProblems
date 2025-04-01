@@ -32,6 +32,17 @@ public class SlidingWindow {
                 break;
             case "SW-2":
                 System.out.println("Longest Substring Without Repeating Characters");
+                break;
+            case "SW-3":
+                System.out.println("Longest Repeating Character Replacement");
+                System.out.println("Please provide string to calculate length of Longest Repeating Character Replacement");
+                String s = sc.next();
+                System.out.println("Please provide the number of replacement allowed");
+                int k = sc.nextInt();
+                LongestRepeatingCharacterReplacement longestRepeatingCharacterReplacement = new LongestRepeatingCharacterReplacement();
+                System.out.printf("Longest Repeating Character Replacement length = %d when %d replacement is allowed\n",
+                        longestRepeatingCharacterReplacement.characterReplacement(s, k), k);
+                break;
             default:
                 System.out.println("Invalid problemCode for sliding window");
         }
