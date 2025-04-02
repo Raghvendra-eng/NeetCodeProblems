@@ -1,7 +1,7 @@
 package org.rv.entity;
 
 public class ListNode {
-    int val;
+    public int val;
 
     public int getVal() {
         return val;
