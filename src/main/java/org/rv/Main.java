@@ -2,9 +2,11 @@ package org.rv;
 
 import org.rv.advanced_graph.NetworkDelayTime;
 import org.rv.array_hashmap_solution.*;
+import org.rv.backtracking.CombinationSum;
 import org.rv.binary_search.BinarySearchSolution;
 import org.rv.intervals.InsertIntervals;
 import org.rv.linked_list.LinkedListSolutions;
+import org.rv.priority_queue.LastStoneWeight;
 import org.rv.sliding_window.SlidingWindow;
 import org.rv.two_pointer_solution.TwoPointers;
 
@@ -53,5 +55,10 @@ public class Main {
                 {4,6}
         };
         System.out.println(insertIntervals.insert(grid, new int[] {2, 5}));
+//        LastStoneWeight lastStoneWeightObj = new LastStoneWeight();
+//        lastStoneWeightObj.lastStoneWeight(new int[]{2,3,6,2,4});
+
+        CombinationSum combinationSumObj = new CombinationSum();
+        combinationSumObj.combinationSum(new int[]{2,5,6,9}, 9);
     }
 }
