@@ -19,7 +19,7 @@ public class Main {
         SlidingWindow slidingWindow = new SlidingWindow();
         BinarySearchSolution binarySearchSolution = new BinarySearchSolution();
         LinkedListSolutions linkedListSolutions = new LinkedListSolutions();
-        System.out.println("Below list contains ProblemCodes and problem description. Choose the ProblemCode from the below list");
+        System.out.println("Below list contains ProblemCodes and problem description. Choose the ProblemCode from the below list.");
         System.out.println("\n==================== Arrays & Hashing Problems List: ====================\n");
         arrayAndHashMap.printListOfProblemCode();
         System.out.println("==================== Two Pointers Problem Code List: ====================\n");
